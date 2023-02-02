@@ -1,6 +1,6 @@
-const app = require('./app')
-const {connectDB} = require('./db')
-const {PORT} = require('./config')
+import app from './app'
+import { connectDB } from './db'
+import { PORT } from './config'
 
 const runApp = () => {
   connectDB()

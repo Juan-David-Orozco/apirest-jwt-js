@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir build",
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.js --exec babel-node"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,10 @@
     "mongoose": "^6.9.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20"
   }

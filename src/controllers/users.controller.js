@@ -1,19 +1,15 @@
-const getUsers = (req, res) => {
+export const getUsers = (req, res) => {
   res.send('Get all Users')
 }
 
-const getUser = (req, res) => {
+export const getUser = (req, res) => {
   res.send('Get User')
 }
 
-const login = (req, res) => {
+export const login = (req, res) => {
   res.send('Login')
 }
 
-const register = (req, res) => {
+export const register = (req, res) => {
   res.send('Register')
-}
-
-module.exports = {
-  getUser, getUsers, login, register
 }

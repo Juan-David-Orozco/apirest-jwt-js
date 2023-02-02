@@ -1,6 +1,6 @@
-const express = require('express')
-const morgan = require('morgan')
-const usersRoute = require('./routes/users.route')
+import express from 'express'
+import morgan from 'morgan'
+import usersRoute from './routes/users.route'
 
 const app = express()
 
@@ -13,4 +13,4 @@ app.get('/', (req, res) => {
 
 app.use('/api', usersRoute)
 
-module.exports = app
+export default app

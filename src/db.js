@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
-const {MONGODB_URI} = require('./config')
+import mongoose from 'mongoose' 
+import { MONGODB_URI } from './config'
 
-const connectDB = async () => {
+export const connectDB = async () => {
   try {
     mongoose.set('strictQuery', true)
     const db = await mongoose.connect(MONGODB_URI)
@@ -10,6 +10,3 @@ const connectDB = async () => {
     console.log(error)
   }
 }
-
-module.exports = { connectDB }
-
