@@ -1,7 +1,7 @@
 {
   "name": "apirest-jwt",
   "version": "1.0.0",
-  "description": "",
+  "description": "API Rest JWT",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir build",
@@ -9,7 +9,7 @@
     "dev": "nodemon src/index.js --exec babel-node"
   },
   "keywords": [],
-  "author": "",
+  "author": "Juan",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
