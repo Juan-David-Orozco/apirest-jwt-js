@@ -1,14 +1,17 @@
 import { Router } from 'express'
 const router = Router()
+import { authJwt, verifyRegister } from '../middlewares'
 
-import {getUsers, getUser, login, register} from '../controllers/users.controller'
+import {getUsers, createUser} from '../controllers/users.controller'
 
 router.get('/', getUsers)
 
-router.get('/:id', getUser)
-
-router.post('/login', login)
-
-router.post('/register', register)
+router.post('/', [
+    authJwt.verifyToken,
+    authJwt.isAdmin,
+    verifyRegister.checkRolesExisted,
+    verifyRegister.checkDuplicateUser
+  ], createUser
+)
 
 export default router

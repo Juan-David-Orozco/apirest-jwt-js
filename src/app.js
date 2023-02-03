@@ -4,6 +4,7 @@ import pkg from '../package.json'
 
 import productsRoutes from './routes/products.route'
 import authRoutes from './routes/auth.route'
+import usersRoutes from './routes/users.route'
 
 import { createRoles } from './libs/initialSetup'
 
@@ -26,5 +27,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', productsRoutes)
 app.use('/api/auth', authRoutes)
+app.use('/api/users', usersRoutes)
 
 export default app
